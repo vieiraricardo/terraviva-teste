@@ -7,7 +7,8 @@ export default function NotFound({ location }) {
   return (
     <Layout pathData={{ location }}>
       <S.Container>
-        <h1>NotFound</h1>
+        <img src="/images/not-found.png" alt="not-found"/>
+        <S.H2>Página não encontrada</S.H2>
       </S.Container>
     </Layout>
   )

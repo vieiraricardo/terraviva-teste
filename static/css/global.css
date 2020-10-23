@@ -286,3 +286,12 @@ a {
   width: 50% !important;
   background: #fff !important;
 }
+
+#animated-element {
+  opacity: 0;
+}
+
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
