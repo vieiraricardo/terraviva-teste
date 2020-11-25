@@ -1,4 +1,4 @@
-const siteMetadata = require("./config/metadata");
+const siteMetadata = require('./config/metadata');
 
 module.exports = {
   siteMetadata,
@@ -6,18 +6,10 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`300`, `500`, `700`],
-          },
-          {
-            family: `Hind`,
-            variants: [`300`, `600`, `900`],
-          },
-        ],
+        fonts: [`Roboto\:300,500,700`, `Hind\:300,600,900`, `Lobster\:400`],
+        display: 'swap',
       },
     },
     {
@@ -29,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        displayName: process.env.NODE_ENV !== "production",
+        displayName: process.env.NODE_ENV !== 'production',
       },
     },
     {
@@ -46,16 +38,16 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: "https://terravivamais.com.br",
-        sitemap: "https://terravivamais.com.br/sitemap.xml",
+        host: 'https://terravivamais.com.br',
+        sitemap: 'https://terravivamais.com.br/sitemap.xml',
         env: {
           development: {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
+            policy: [{ userAgent: '*', disallow: ['/'] }],
           },
           production: {
-            policy: [{ userAgent: "*", allow: "/" }],
+            policy: [{ userAgent: '*', allow: '/' }],
           },
         },
       },
@@ -64,7 +56,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-168034123-1",
+        trackingId: 'UA-168034123-1',
         // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: false,
         // Setting this parameter is optional
@@ -72,7 +64,7 @@ module.exports = {
         // Setting this parameter is also optional
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
-        exclude: ["/preview/**"],
+        exclude: ['/preview/**'],
         // Delays sending pageview hits on route update (in milliseconds)
         pageTransitionDelay: 0,
         // Defers execution of google analytics script after page load
@@ -80,7 +72,7 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "terravivamais.com.br",
+        cookieDomain: 'terravivamais.com.br',
       },
     },
   ],

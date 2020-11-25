@@ -94,7 +94,7 @@ export default function Home({
       },
     };
 
-    fetch("https://sanitymilk-mailer.now.sh/send-mail", options)
+    fetch("http://localhost:8080/send-mail", options)
       .then(() => setMail(initialState))
       .then(showDialog);
 
